@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+    <title>Eat-Da-Burger!</title>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="/assets/js/burger.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Eat-Da-Burger!</h1>
+        <h2>Welcome to your dreamy restaurante</h2>
+        <h2>There is No menu ! </h2>
+        <h2>We serve any Burger you could possibly imagine!</h2>
+
+        <div>
+            <form class="create-form">
+
+                <div class="form-group">
+                    <textarea type="text" name="burger"></textarea>
+                </div>
+
+                <button type="submit">Preper my Burger!</button>
+            </form>
+        </div>
+
+
+        <!--SUBMITTED BURGERS-->
+        <div>
+            <h3>Your Ready-to-Devour Burgers:</h3>
+            <ul>
+                <!-- {{#each burgers}} -->
+                <li>
+
+                    <p><span class="label"></span> {{this.id}}</p>
+                    <p><span class="label">Your Burger:</span> {{this.burger}}</p>
+
+                    <button data-id="{{this.id}}" class="devour">Devour it!</button>
+                </li>
+                <!-- {{/each}} -->
+            </ul>
+        </div>
+
+        <!--DEVOURED BURGERS-->
+        <div>
+            <h3>You nailed them:</h3>
+            <ul>
+                <!-- {{#each burgers}} -->
+                <li>
+
+                    <p><span class="label"></span> {{this.id}}</p>
+                    <p><span class="label">Your Burger:</span> {{this.burger}}</p>
+
+                </li>
+                <!-- {{/each}} -->
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
