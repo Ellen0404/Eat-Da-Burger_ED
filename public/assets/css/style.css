@@ -1,0 +1,82 @@
+ /* body, html {
+    height: 100%;
+    font-family: "Inconsolata", sans-serif;
+  } */
+  
+  /* .bgimg {
+    background-position: center;
+    background-size: cover;
+    background-image: url(../images/burger-on-brown-platter-2271106.jpg);
+    /* min-height: 65%; */
+    /* width: 50%; */
+  /* } */
+
+ 
+
+  body, html {
+    height: 100vh;
+    background-image: url(../images/burger-and-vegetables-placed-on-brown-wood-surface-1565982.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size:cover;
+ 
+    }
+h1,h2,h3,h4,p{
+    color:white;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+h1{
+    font-size: 70px !important;
+}
+h2{
+    font-size: 35px;
+}
+p{
+    font-size: 20px;
+    
+}
+.divBlock{
+    
+    color:#c6c7c9;
+    padding: 0.5rem;
+    margin-top: 25px;
+}
+.divBlock2{
+    margin-left: 40px; 
+    padding: 0.5rem;
+    margin-top: 25px;
+}
+
+.color{
+    background-color:rgb(160, 194, 82) ;
+    opacity: 0.8;
+}
+.form-control{
+    background-color:rgb(149, 192, 50);
+    border-color:#f5f853;
+    outline:0;
+    border:3px solid rgb(15, 143, 47);
+    opacity: 0.8;
+}
+
+.center{
+    margin: auto 0;
+}
+.btn{
+    
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.marginL{
+    margin-left: 30px;
+}
+.btn-success{
+    opacity: 0.8;
+}
+.btn-warning{
+    opacity: 0.9;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    background-color:#f78e1c;
+
+}

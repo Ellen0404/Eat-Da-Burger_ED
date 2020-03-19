@@ -1,54 +1,76 @@
-<h1>Eat-Da-Burger!</h1>
-<h2>Welcome to your dreamy restaurante</h2>
-<h2>There is No menu ! </h2>
-<h2>We serve any Burger you could possibly imagine!</h2>
-
-<div>
-    <form class="create-form">
-
-        <div class="form-group">
-            <textarea type="text" name="burger" id="newB"></textarea>
+<div class="container">
+    <div>
+        <div class="divBlock">
+            <h1 class="text-center">Eat-Da-Burger!</h1>
         </div>
+        <div class="row justify-content-center">
 
-        <button type="submit">Preper my Burger!</button>
-    </form>
+            <h4>Enter your dreamy burger here and it be ready in a second!</h4><br>
+
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-3">
+        <form class="create-form justify-content-center">
+
+            <div class="form-group">
+                <div class="row">
+                    <textarea class="form-control" cols="30" type="text" name="burger" id="newB"></textarea>
+                </div>
+
+            </div>
+            <div class="row justify-content-center">
+                <button class="btn btn-success" type="submit">Preper my Burger!</button>
+            </div>
+
+        </form>
+    </div>
+
 </div>
-
 
 <!--SUBMITTED BURGERS-->
-<div>
-    <h3>Your Ready-to-Devour Burgers:</h3>
-    <ul>
-        {{#each burgers}}
-        {{#unless devoured}}
-        {{!-- {{> burgers/burger-block devourednow=true}} --}}
-        <li>
-            {{id}} . {{burger_name}}
+<div class=" divBlock2">
+    <div class="row">
+        <div class="col-md-8">
+            <div>
+                <h2>Your Ready-to-Devour Burgers:</h2>
+            </div>
 
-            <button class="devour" data-id="{{id}}" data-nowdevoured="true">
-                Devour it!
-            </button>
+            <ul>
+                {{#each burgers}}
+                {{#unless devoured}}
+                {{!-- {{> burgers/burger-block devourednow=true}} --}}
+                <li>
+
+                    <p> {{id}} . {{burger_name}} </p>
+
+                    <button class="btn btn-warning devour" data-id="{{id}}" data-nowdevoured="true">
+                        Devour it!
+                    </button>
 
 
-        </li>
-        {{/unless}}
-        {{/each}}
-    </ul>
-</div>
+                </li>
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
 
-<!--DEVOURED BURGERS-->
-<div>
-    <h3>You nailed them:</h3>
-    <ul>
-        {{#each burgers}}
-        {{#if devoured}}
-        {{!-- {{> burgers/burger-block devourednow=false}} --}}
-        <li>
 
-            {{id}} .{{burger_name}}
+        <!--DEVOURED BURGERS-->
+        <div class="col-md-4">
+            <h2>You nailed them:</h2>
+            <ul>
+                {{#each burgers}}
+                {{#if devoured}}
+                {{!-- {{> burgers/burger-block devourednow=false}} --}}
+                <li>
 
-        </li>
-        {{/if}}
-        {{/each}}
-    </ul>
+                    <p> {{id}} .{{burger_name}} </p>
+
+                </li>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
 </div>
